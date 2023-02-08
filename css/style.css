@@ -1,47 +1,50 @@
-
 #logo {
     display: grid;
     max-height: 10vh;
+    padding-bottom: 20px;
+    margin-left: 25px;
+    background-color: rgb(201, 178, 150);
 }
-
-
 img {
-
     object-fit: contain;
     max-width: 300px;
     max-height: 300px;
+    border-radius: 20px;
 }
-#team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
- 
-    justify-items: center;
-    align-items: center;
-}
-#team>section {
+footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-items: center;
     align-items: center;
+    padding-top: 30px;
+    background-color: rgb(201, 178, 150);
 }
-section>p {
-    max-width: 70%;
+section p {
+    max-width: 380px;
 }
-#product>section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    justify-items: center;
-    align-items: center;
-}
-   
 
-@media only screen and (max-width:425px) {
-p {
-    display: none;
-}
-}
-@media only screen and (max-width:1233px) {
- #team>section {
+main section {
+    display: grid;
     grid-template-columns: 1fr;
- }
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width:420px) {
+    main p {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:1300px) {
+main section {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+}
+@media only screen and (max-width:1300px) {
+#product p {
+order: 2;
+}
+    
 }
